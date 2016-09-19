@@ -4,9 +4,9 @@
   "description": "",
   "main": "Car.js",
   "scripts": {
-    "postinstall" : ".\\node_modules\\.bin\\typings install",
-    "test": ".\\node_modules\\.bin\\mocha --opts .\\mocha.opts",
-    "build": ".\\node_modules\\.bin\\webpack"
+    "postinstall" : "./node_modules/.bin/typings install",
+    "test": "./node_modules/.bin/mocha --opts ./mocha.opts",
+    "build": "./node_modules/.bin/webpack"
   },
   "author": "",
   "license": "ISC",
