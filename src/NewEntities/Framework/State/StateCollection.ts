@@ -1,7 +1,7 @@
 import {State} from "./State";
 import {Entity} from "../Entity/Entity";
-import {EntityStateChangedEvent} from "../../NewEntities/Campaign/CampaignCollection/EntityStateChanged.event";
 import {Event} from "../Events/Event";
+import {EntityStateChangedEvent} from "../Entity/EntityStateChanged.event";
 
 export class StateCollection {
 

@@ -1,4 +1,4 @@
-import {Event} from "../../Framework/Events/Event";
+import {Event} from "../Events/Event";
 
 
 export class EntityStateChangedEvent extends Event {

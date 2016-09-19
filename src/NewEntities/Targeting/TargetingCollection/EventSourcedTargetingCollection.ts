@@ -1,6 +1,6 @@
 import {TargetingCollection} from "./TargetingCollection";
 import {Targeting} from "../Targeting.ts";
-import {TargetingSetEvent} from "../../NewEntities/Campaign/SetTargeting/TargetingSet.event";
+import {TargetingSetEvent} from "../../Campaign/SetTargeting/TargetingSet.event";
 
 export class EventSourcedTargetingCollection extends TargetingCollection {
 
