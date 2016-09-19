@@ -1,14 +1,14 @@
-import {CampaignFactory} from "./Campaign/CampaignFactory";
-import {CommandProcessor} from "./Framework/Commands/CommandProcessor";
-import {SetNameCommand} from "./Campaign/SetName/SetName.command";
-import {SetTargetingCommand} from "./Campaign/SetTargeting/SetTargeting.command";
-import {GeoTargeting} from "./Targeting/GeoTargeting/GeoTargeting";
+import {CampaignFactory} from "./NewEntities/Campaign/CampaignFactory";
+import {CommandProcessor} from "./NewEntities/Framework/Commands/CommandProcessor";
+import {SetNameCommand} from "./NewEntities/Campaign/SetName/SetName.command";
+import {SetTargetingCommand} from "./NewEntities/Campaign/SetTargeting/SetTargeting.command";
+import {GeoTargeting} from "./NewEntities/Targeting/GeoTargeting/GeoTargeting";
 
-import * as eventDictionary from "./Framework/Events/EventDictionary";
-import {LoggingEventManager} from "./Framework/Events/Managers/LoggingEventManager";
-import {BaseEventManager} from "./Framework/Events/Managers/BaseEventManager";
-import {Environment} from "./Framework/Environment/Environment";
-import {TransactionSavingEventManager} from "./Framework/Events/Managers/TransactionSavingEventManager";
+import * as eventDictionary from "./NewEntities/Framework/Events/EventDictionary";
+import {LoggingEventManager} from "./NewEntities/Framework/Events/Managers/LoggingEventManager";
+import {BaseEventManager} from "./NewEntities/Framework/Events/Managers/BaseEventManager";
+import {Environment} from "./NewEntities/Framework/Environment/Environment";
+import {TransactionSavingEventManager} from "./NewEntities/Framework/Events/Managers/TransactionSavingEventManager";
 
 console.log(eventDictionary);
 
