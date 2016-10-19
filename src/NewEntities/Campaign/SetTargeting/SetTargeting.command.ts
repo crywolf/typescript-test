@@ -1,6 +1,6 @@
-import {Campaign} from "../Campaign";
-import {Targeting} from "../../Targeting/Targeting.ts";
-import {GeoTargeting} from "../../Targeting/GeoTargeting/GeoTargeting";
+import {Campaign} from '../Campaign';
+import {Targeting} from '../../Targeting/Targeting.ts';
+import {GeoTargeting} from '../../Targeting/GeoTargeting/GeoTargeting';
 
 export class SetTargetingCommand {
 
@@ -10,7 +10,7 @@ export class SetTargetingCommand {
         this.targeting = new GeoTargeting(data);
     }
 
-    executeOn(entity: Campaign) {
+    public executeOn(entity: Campaign) {
         entity.setTargeting(this.targeting);
     }
 

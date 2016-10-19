@@ -1,22 +1,22 @@
-import {Event} from "../../Framework/Events/Event";
+import {Event} from '../../Framework/Events/Event';
 
-export interface NameSetEventData {
-    newName: string
+export interface INameSetEventData {
+    newName: string;
 }
 
 export class NameSetEvent extends Event {
 
-    constructor(public newName:string) {
+    constructor(public newName: string) {
         super();
     }
 
-    getData() : NameSetEventData {
+    public getData(): INameSetEventData {
         return {
             newName: this.newName
-        }
+        };
     }
 
-    deserialize(serializedEvent: NameSetEventData) {
+    public deserialize(serializedEvent: INameSetEventData) {
         this.newName = serializedEvent.newName;
     }
 

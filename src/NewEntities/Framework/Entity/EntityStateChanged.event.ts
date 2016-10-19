@@ -1,5 +1,4 @@
-import {Event} from "../Events/Event";
-
+import {Event} from '../Events/Event';
 
 export class EntityStateChangedEvent extends Event {
 
@@ -7,14 +6,14 @@ export class EntityStateChangedEvent extends Event {
         super();
     }
 
-    getData()  {
+    public getData() {
         return {
             newStateName: this.newStateName
-        }
+        };
     }
 
-    deserialize() {
-
+    public deserialize() {
+        ;
     }
 
 }

@@ -1,21 +1,20 @@
-export  class AllocationRequest {
+export class AllocationRequest {
 
     constructor(private amount: number, private type?: string, private requestor?: string) {
         if (!requestor) {
-            this.requestor = "anonymous";
+            this.requestor = 'anonymous';
         }
     };
 
-
-    getAmount() {
+    public getAmount() {
         return this.amount;
     }
 
-    getType() {
+    public getType() {
         return this.type;
     }
 
-    getRequestor() {
+    public getRequestor() {
         return this.requestor;
     }
 }

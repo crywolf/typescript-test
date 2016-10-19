@@ -1,13 +1,12 @@
-import {NameSetEvent} from "./SetName/NameSet.event";
-import {Campaign} from "./Campaign";
-import {EventFactory} from "../Framework/Events/EventFactory";
-import {CampaignView} from "./CampaignView";
-import {CampaignInstanceBuilder, CampaignData} from "./CampaignInstanceBuilder";
-import {TransactionSavingEventManager} from "../Framework/Events/Managers/TransactionSavingEventManager";
-import {BaseEventManager} from "../Framework/Events/Managers/BaseEventManager";
-import {Environment} from "../Framework/Environment/Environment";
-import {EventSourcedCampaign} from "./EventSourcedCampaign";
-
+import {NameSetEvent} from './SetName/NameSet.event';
+import {Campaign} from './Campaign';
+import {EventFactory} from '../Framework/Events/EventFactory';
+import {CampaignView} from './CampaignView';
+import {CampaignInstanceBuilder, CampaignData} from './CampaignInstanceBuilder';
+import {TransactionSavingEventManager} from '../Framework/Events/Managers/TransactionSavingEventManager';
+import {BaseEventManager} from '../Framework/Events/Managers/BaseEventManager';
+import {Environment} from '../Framework/Environment/Environment';
+import {EventSourcedCampaign} from './EventSourcedCampaign';
 
 let events = [
     new NameSetEvent('firstName').serialize(),
@@ -17,24 +16,23 @@ let events = [
 export class CampaignFactory {
 
     private eventFactory = new EventFactory();
-    private ViewClass =  CampaignView;
-    private BuilderClass = CampaignInstanceBuilder;
+    private viewClass = CampaignView;
+    private builderClass = CampaignInstanceBuilder;
 
-    private environment = new Environment(new TransactionSavingEventManager(new BaseEventManager()) );
+    private environment = new Environment(new TransactionSavingEventManager(new BaseEventManager()));
 
-    setEnvironment(env: Environment) {
+    public setEnvironment(env: Environment) {
         this.environment = env;
     }
 
-
-    createNew(id:string) : Campaign {
+    public createNew(id: string): Campaign {
         let campaign = new Campaign(id);
         return this.initialize(campaign);
     }
 
-    instantiateFromEvents(id): Campaign {
+    public instantiateFromEvents(id): Campaign {
         let campaignSnapshot = this.buildCampaignSnapshotDataFromEvents();
-        let campaign =  new EventSourcedCampaign(id, campaignSnapshot);
+        let campaign = new EventSourcedCampaign(id, campaignSnapshot);
         return this.initialize(campaign);
     }
 
@@ -45,9 +43,9 @@ export class CampaignFactory {
 
     private buildCampaignSnapshotDataFromEvents() {
         let data = new CampaignData();
-        let view  = new this.ViewClass(new this.BuilderClass(data));
+        let view = new this.viewClass(new this.builderClass(data));
 
-        events.forEach( serializedEvent => { this.applyEvent(view, serializedEvent) });
+        events.forEach(serializedEvent => this.applyEvent(view, serializedEvent));
 
         return data;
     }

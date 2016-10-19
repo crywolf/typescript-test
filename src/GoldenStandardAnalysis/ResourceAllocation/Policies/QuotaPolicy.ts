@@ -1,12 +1,12 @@
-import {Policy} from "./Policy";
-import {AllocationRequest} from "../AllocationRequest";
-import {Allocations} from "../Allocations";
+import {Policy} from './Policy';
+import {AllocationRequest} from '../AllocationRequest';
+import {Allocations} from '../Allocations';
 /*
-Approves requests based on the request amount and total quota for it
+ Approves requests based on the request amount and total quota for it
  */
 
-interface QuotaConfig {
-    requestType: string,
+interface IQuotaConfig {
+    requestType: string;
     quota: number;
 }
 
@@ -14,16 +14,15 @@ export class QuotaPolicy extends Policy {
 
     constructor(config) {
         super(config);
-        this.config = <QuotaConfig>config;
+        this.config = <IQuotaConfig> config;
     }
 
-    handle (request: AllocationRequest, allocations: Allocations) {
+    public handle(request: AllocationRequest, allocations: Allocations) {
         if (this.isMyRequestType(request) && this.amountExceedesQuota(request, allocations)) {
-                return false;
+            return false;
         }
         return true;
     }
-
 
     private isMyRequestType(request: AllocationRequest) {
         return request.getType() === this.config.requestType;

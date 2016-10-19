@@ -1,5 +1,5 @@
-import {BaseEventManager} from "../Events/Managers/BaseEventManager";
-import {EventManager} from "../Events/Managers/EventManager";
+import {BaseEventManager} from '../Events/Managers/BaseEventManager';
+import {EventManager} from '../Events/Managers/EventManager';
 
 export class Environment {
 
@@ -11,24 +11,24 @@ export class Environment {
         }
     }
 
-    fireEvent(source, event)  {
+    public fireEvent(source, event) {
         this.eventManager.fireEvent(source, event);
     }
 
-    setEventManager(eventManager) {
+    public setEventManager(eventManager) {
         this.eventManager = eventManager;
     }
 
-    getEventsProduced() {
+    public getEventsProduced() {
         return this.eventManager.getEvents();
     }
 
-    getLastEvent() {
+    public getLastEvent() {
         let events = this.eventManager.getEvents();
         return events[events.length - 1];
     }
 
-    reset() {
+    public reset() {
         this.eventManager.reset();
     }
 

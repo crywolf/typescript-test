@@ -1,11 +1,11 @@
-import {Campaign} from "../Campaign";
+import {Campaign} from '../Campaign';
 
 export class SetNameCommand {
 
-    constructor( private name: string) {
+    constructor(private name: string) {
     }
 
-    executeOn(entity: Campaign) {
+    public executeOn(entity: Campaign) {
         entity.setName(this.name);
     }
 

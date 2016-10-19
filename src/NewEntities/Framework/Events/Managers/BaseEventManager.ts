@@ -1,11 +1,10 @@
-import {EventManager} from "./EventManager";
+import {EventManager} from './EventManager';
 
-export class BaseEventManager extends EventManager {                // decorator;
+export class BaseEventManager extends EventManager { // decorator;
 
-    fireEvent(source, event) {
-            event.setSource(source);
-            this.next(source,event);
+    public fireEvent(source, event) {
+        event.setSource(source);
+        this.next(source, event);
     }
 
 }
-

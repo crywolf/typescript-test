@@ -1,5 +1,5 @@
 
-export interface PolicyConfig {
-    type: { new(config: PolicyConfig) }
-    config: any
+export interface IPolicyConfig {
+    type: { new(config: IPolicyConfig) };
+    config: any;
 }

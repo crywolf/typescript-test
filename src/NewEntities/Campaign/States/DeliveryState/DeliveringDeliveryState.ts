@@ -1,14 +1,14 @@
-import {DeliveryState} from "./DeliveryState";
-import {PausedState} from "./PausedDeliveryState";
+import {DeliveryState} from './DeliveryState';
+import {PausedState} from './PausedDeliveryState';
 
 export class DeliveringState extends DeliveryState {
 
-    pause() {
+    public pause() {
         this.states.setState(PausedState);
     }
 
-    getName() {
-        return "Delivering";
+    public getName() {
+        return 'Delivering';
     }
 
 }

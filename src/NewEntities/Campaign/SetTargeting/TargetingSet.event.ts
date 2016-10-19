@@ -1,5 +1,5 @@
-import {Event} from "../../Framework/Events/Event";
-import {Targeting} from "../../Targeting/Targeting.ts";
+import {Event} from '../../Framework/Events/Event';
+import {Targeting} from '../../Targeting/Targeting.ts';
 
 export class TargetingSetEvent extends Event {
 
@@ -7,14 +7,14 @@ export class TargetingSetEvent extends Event {
         super();
     }
 
-    getData() {
+    public getData() {
         return {
             targetings: this.targeting
-        }
+        };
     }
 
-    deserialize(serializedEvent) {
-
+    public deserialize(serializedEvent) {
+        ;
     }
 
 }

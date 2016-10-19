@@ -1,13 +1,13 @@
-import {CampaignCollection} from "./CampaignCollection/CampaignCollection";
-import {Entity} from "../Framework/Entity/Entity";
-import {TargetingCollection} from "../Targeting/TargetingCollection/TargetingCollection";
-import {Targeting} from "../Targeting/Targeting.ts";
-import {CampaignStates} from "./States/CampaignStates";
-import {State} from "../Framework/State/State";
+import {CampaignCollection} from './CampaignCollection/CampaignCollection';
+import {Entity} from '../Framework/Entity/Entity';
+import {TargetingCollection} from '../Targeting/TargetingCollection/TargetingCollection';
+import {Targeting} from '../Targeting/Targeting.ts';
+import {CampaignStates} from './States/CampaignStates';
+import {State} from '../Framework/State/State';
 
 export class Campaign extends Entity {
 
-    protected name = "";
+    protected name = '';
     protected targetings: TargetingCollection;
     protected subcampaigns: CampaignCollection;
     protected states: CampaignStates;
@@ -19,32 +19,32 @@ export class Campaign extends Entity {
         this.states = new CampaignStates(this);
     }
 
-    getName(): string {
+    public getName(): string {
         return this.name;
     }
 
-    setName( newName:string ) {
+    public setName(newName: string) {
         this.name = newName;
     }
 
-    setTargeting( targeting:Targeting) {
+    public setTargeting(targeting: Targeting) {
         this.targetings.add(targeting);
         this.subcampaigns.each(subcampaign => subcampaign.setTargeting(targeting));
     }
 
-    getTargetingByType (targetingType: typeof Targeting) {
+    public getTargetingByType(targetingType: typeof Targeting) {
         return this.targetings.getByType(targetingType);
     }
 
-    addSubCampaign(campaign:Campaign) {
+    public addSubCampaign(campaign: Campaign) {
         this.subcampaigns.add(campaign);
     }
 
-    pause() {
+    public pause() {
         this.states.pause();
     }
 
-    getState(stateType: typeof State){
+    public getState(stateType: typeof State) {
         return this.states.getStateType(stateType);
     }
 

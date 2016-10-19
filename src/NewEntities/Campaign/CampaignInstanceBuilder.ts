@@ -1,19 +1,18 @@
-import {CampaignBuilder} from "./CampaignBuilderInterface";
-import {Targeting} from "../Targeting/Targeting.ts";
+import {ICampaignBuilder} from './CampaignBuilderInterface';
+import {Targeting} from '../Targeting/Targeting.ts';
 
 export class CampaignData {
-    name: string = "";
-    targetings: Array<Targeting> = [];
+    public name: string = '';
+    public targetings: Array<Targeting> = [];
 }
 
+export class CampaignInstanceBuilder implements ICampaignBuilder {
 
-export class CampaignInstanceBuilder implements CampaignBuilder {
-
-    constructor( private campaignData: CampaignData) {
+    constructor(private campaignData: CampaignData) {
     }
 
     public setName(name) {
-        this.campaignData.name =  name;
+        this.campaignData.name = name;
     }
 
     public addTargeting(targeting) {

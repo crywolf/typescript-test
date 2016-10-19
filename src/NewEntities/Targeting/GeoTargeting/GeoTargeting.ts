@@ -1,4 +1,4 @@
-import {Targeting} from "../Targeting.ts";
+import {Targeting} from '../Targeting.ts';
 
 export class GeoTargeting extends Targeting {
 

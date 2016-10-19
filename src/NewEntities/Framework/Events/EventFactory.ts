@@ -1,16 +1,15 @@
-import {Event} from "./Event";
-import * as eventDictionary from "./EventDictionary";
-
+import {Event} from './Event';
+import * as eventDictionary from './EventDictionary';
 
 export class EventFactory {
 
-    instantiate<E extends Event> ( EventType:{new():E} ): E {
+    public instantiate<E extends Event>(EventType: {new(): E}): E {
         return new EventType();
     }
 
-    deserialize(serializedEvent) {
+    public deserialize(serializedEvent) {
         let constructorName = serializedEvent.typeName;
-        let event:Event = new eventDictionary[constructorName]();
+        let event: Event = new eventDictionary[constructorName]();
         event.deserialize(serializedEvent.data);
 
         return event;

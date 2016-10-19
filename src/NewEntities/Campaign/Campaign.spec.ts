@@ -1,10 +1,10 @@
-import { expect } from "chai";
-import {Campaign} from "./Campaign";
-import {DeliveryState} from "./States/DeliveryState/DeliveryState";
-import {NonDeliveringState} from "./States/DeliveryState/NonDeliveringDeliveryState";
-import {State} from "../Framework/State/State";
-import {PausedState} from "./States/DeliveryState/PausedDeliveryState";
-import {GeoTargeting} from "../Targeting/GeoTargeting/GeoTargeting";
+import {expect} from 'chai';
+import {Campaign} from './Campaign';
+import {DeliveryState} from './States/DeliveryState/DeliveryState';
+import {NonDeliveringState} from './States/DeliveryState/NonDeliveringDeliveryState';
+import {State} from '../Framework/State/State';
+import {PausedState} from './States/DeliveryState/PausedDeliveryState';
+import {GeoTargeting} from '../Targeting/GeoTargeting/GeoTargeting';
 
 describe('Campaign', () => {
 
@@ -19,7 +19,7 @@ describe('Campaign', () => {
 
     function addSubCampaignsToCampaign() {
         subCampaign1 = createCampaign('subId1');
-        subCampaign2 =  createCampaign('subId2');
+        subCampaign2 = createCampaign('subId2');
 
         campaign.addSubCampaign(subCampaign1);
         campaign.addSubCampaign(subCampaign2);
@@ -29,29 +29,29 @@ describe('Campaign', () => {
         campaign = createCampaign('someId');
     });
 
-
     describe('setting name', () => {
 
         it('should not allow setting anything but string', () => {
             function setNameTo(value: any) {
                 return () => {
                     campaign.setName(value);
-                }
+                };
             }
+
             expect(setNameTo(null)).to.throw;
             expect(setNameTo(undefined)).to.throw;
         });
 
         it('should initially have no name', () => {
-            expect(campaign.getName()).to.eq("");
+            expect(campaign.getName()).to.eq('');
         });
 
         it('should set name to name provided', () => {
-            campaign.setName("abc");
-            expect(campaign.getName()).to.eq("abc");
+            campaign.setName('abc');
+            expect(campaign.getName()).to.eq('abc');
 
-            campaign.setName("1234 678 SOmeCraZ1 St*ing");
-            expect(campaign.getName()).to.eq("1234 678 SOmeCraZ1 St*ing");
+            campaign.setName('1234 678 SOmeCraZ1 St*ing');
+            expect(campaign.getName()).to.eq('1234 678 SOmeCraZ1 St*ing');
         });
 
     });
@@ -59,7 +59,7 @@ describe('Campaign', () => {
     describe('states', () => {
 
         function assertCampaignInState(stateType: typeof State, stateValue: typeof State) {
-             return  expect(campaign.getState(stateType)).to.be.instanceOf(stateValue);
+            return expect(campaign.getState(stateType)).to.be.instanceOf(stateValue);
         }
 
         it('should initially be in non delivering state', () => {
@@ -80,10 +80,10 @@ describe('Campaign', () => {
     describe('adding subcampaigns', () => {
 
         it('should allow adding subcampaigns', () => {
-            addSubCampaignsToCampaign()
-            //should throw if it does not exist.. should this test even exist?
+            addSubCampaignsToCampaign();
+            // should throw if it does not exist.. should this test even exist?
         });
-        
+
     });
 
     describe('setting targeting', () => {

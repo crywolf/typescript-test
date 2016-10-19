@@ -1,7 +1,7 @@
-import {Entity} from "../Entity/Entity";
+import {Entity} from '../Entity/Entity';
 
 export abstract class Command {
 
-    abstract executeOn (entity:Entity);
+    public abstract executeOn(entity: Entity);
 
 }

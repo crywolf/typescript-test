@@ -1,21 +1,19 @@
-import {AllocationRequest} from "./AllocationRequest";
+import {AllocationRequest} from './AllocationRequest';
 
 export class Allocations {
 
     private total = 0;
     private totalsByType = {};
 
-    constructor() {}
-
-    getTotal() {
+    public getTotal() {
         return this.total;
     }
 
-    getTotalFor(type) {
+    public getTotalFor(type) {
         return this.totalsByType[type] || 0;
     }
 
-    add(request: AllocationRequest) {
+    public add(request: AllocationRequest) {
         const type = request.getType();
         const amount = request.getAmount();
 

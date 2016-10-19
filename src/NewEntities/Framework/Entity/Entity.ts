@@ -1,26 +1,26 @@
-import {Event} from "../Events/Event";
-import {Environment} from "../Environment/Environment";
+import {Event} from '../Events/Event';
+import {Environment} from '../Environment/Environment';
 
 export abstract class Entity {
 
     private environment = new Environment();
 
-    constructor(private id:string) {
+    constructor(private id: string) {
     }
 
-    toString(): string {
-        return (<any>this).constructor.name + '#' + this.id;
+    public toString(): string {
+        return (<any> this).constructor.name + '#' + this.id;
     }
 
-    fireEvent(event: Event) {
+    public fireEvent(event: Event) {
         this.environment.fireEvent(this, event);
     }
 
-    getEnvironment () {
+    public getEnvironment() {
         return this.environment;
     }
 
-    setEnvironment (environment) {
+    public setEnvironment(environment) {
         this.environment = environment;
     }
 }

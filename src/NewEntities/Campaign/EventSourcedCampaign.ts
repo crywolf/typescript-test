@@ -1,17 +1,17 @@
-import {Campaign} from "./Campaign";
-import {CampaignData} from "./CampaignInstanceBuilder";
-import {NameSetEvent} from "./SetName/NameSet.event";
-import {EventSourcedTargetingCollection} from "../Targeting/TargetingCollection/EventSourcedTargetingCollection";
+import {Campaign} from './Campaign';
+import {CampaignData} from './CampaignInstanceBuilder';
+import {NameSetEvent} from './SetName/NameSet.event';
+import {EventSourcedTargetingCollection} from '../Targeting/TargetingCollection/EventSourcedTargetingCollection';
 
-export class EventSourcedCampaign extends Campaign{
+export class EventSourcedCampaign extends Campaign {
 
-    constructor(id, data : CampaignData) {
+    constructor(id, data: CampaignData) {
         super(id);
         this.initialize(data);
     }
 
-    setName(newName) {
-        var oldName = this.name;
+    public setName(newName) {
+        const oldName = this.name;
         super.setName(newName);
         if (oldName !== newName) {
             this.fireEvent(new NameSetEvent(newName));
@@ -28,6 +28,7 @@ export class EventSourcedCampaign extends Campaign{
     }
 
     private applyTargeting(targetings) {
-         this.targetings = new EventSourcedTargetingCollection(this, targetings);
+        this.targetings = new EventSourcedTargetingCollection(this, targetings);
     }
+
 }

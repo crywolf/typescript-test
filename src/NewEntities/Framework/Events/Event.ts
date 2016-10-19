@@ -1,42 +1,41 @@
-import {Entity} from "../Entity/Entity";
-import * as eventDictionary from "./EventDictionary";
+import {Entity} from '../Entity/Entity';
+import * as eventDictionary from './EventDictionary';
 
 export abstract class Event {
 
-    private source: Entity;
-
-    getData() {
-        return <any>{};
-    };
-
-    getTypeName() {
-        return (<any>this).constructor.name;
-    };
-
-    static getTypeName() {
-        return (<any>this).name;
+    public static getTypeName() {
+        return (<any> this).name;
     }
 
-    serialize() {
+    public static register(econ) {
+        eventDictionary[econ.name] = econ;
+    }
+
+    private source: Entity;
+
+    public getData() {
+        return <any> {};
+    };
+
+    public getTypeName() {
+        return (<any> this).constructor.name;
+    };
+
+    public serialize() {
         return {
             data: this.getData(),
             typeName: this.getTypeName()
-        }
+        };
     }
 
-    setSource(entity:Entity) {
+    public setSource(entity: Entity) {
         this.source = entity;
     }
 
-    getSource() {
+    public getSource() {
         return this.source;
     }
 
     public abstract deserialize(serializedEvent);
-
-    static register(econ) {
-        eventDictionary[econ.name] = econ;
-    }
-
 
 }

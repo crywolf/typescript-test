@@ -1,5 +1,5 @@
-import {Event} from "../../Framework/Events/Event";
-import {Campaign} from "../Campaign";
+import {Event} from '../../Framework/Events/Event';
+import {Campaign} from '../Campaign';
 
 export class SubCampaignAddedEvent extends Event {
 
@@ -7,14 +7,14 @@ export class SubCampaignAddedEvent extends Event {
         super();
     }
 
-    getData() {
+    public getData() {
         return {
             campaignAdded: this.campaign
-        }
+        };
     }
 
-    deserialize(serializedEvent) {
-
+    public deserialize(serializedEvent) {
+        ;
     }
 
 }

@@ -1,22 +1,22 @@
-import {Policy} from "./Policy";
-import {AllocationRequest} from "../AllocationRequest";
-import {Allocations} from "../Allocations";
+import {Policy} from './Policy';
+import {AllocationRequest} from '../AllocationRequest';
+import {Allocations} from '../Allocations';
 /*
-Allows requests based on WHO is making them
+ Allows requests based on WHO is making them
  */
 
-interface AuthorizationConfig {
-    users: Array<string>
+interface IAuthorizationConfig {
+    users: Array<string>;
 }
 
 export class AuthorizationPolicy extends Policy {
 
     constructor(config) {
         super(config);
-        this.config = <AuthorizationConfig>config;
+        this.config = <IAuthorizationConfig> config;
     }
 
-    handle(request: AllocationRequest, allocations: Allocations) {
-        return this.config.users.indexOf(request.getRequestor()) !== -1
+    public handle(request: AllocationRequest, allocations: Allocations) {
+        return this.config.users.indexOf(request.getRequestor()) !== -1;
     }
 }
