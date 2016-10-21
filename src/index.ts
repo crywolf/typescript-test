@@ -9,6 +9,8 @@ import {BaseEventManager} from './NewEntities/Framework/Events/Managers/BaseEven
 import {Environment} from './NewEntities/Framework/Environment/Environment';
 import {TransactionSavingEventManager} from './NewEntities/Framework/Events/Managers/TransactionSavingEventManager';
 
+/* tslint:disable:no-console */
+
 console.log(eventDictionary);
 
 let cf = new CampaignFactory();

@@ -13,7 +13,7 @@ export class EntityStateChangedEvent extends Event {
     }
 
     public deserialize() {
-        ;
+        //
     }
 
 }

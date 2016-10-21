@@ -2252,7 +2252,7 @@ tslint-config-standard@^1.5.0:
   dependencies:
     tslint-eslint-rules "^2.0.1"
 
-tslint-eslint-rules@^2.0.1:
+tslint-eslint-rules, tslint-eslint-rules@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/tslint-eslint-rules/-/tslint-eslint-rules-2.1.0.tgz#1535f9e5843f8c976d51e0f80fb20fc5f0640ea1"
   dependencies:

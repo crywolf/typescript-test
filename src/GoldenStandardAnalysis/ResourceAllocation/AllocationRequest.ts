@@ -4,7 +4,7 @@ export class AllocationRequest {
         if (!requestor) {
             this.requestor = 'anonymous';
         }
-    };
+    }
 
     public getAmount() {
         return this.amount;

@@ -5,7 +5,7 @@ export abstract class Targeting {
     }
 
     constructor(data: any) {
-        ;
+        //
     }
 
     public getTypeName() {

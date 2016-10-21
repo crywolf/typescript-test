@@ -5,7 +5,7 @@ import {Allocations} from '../Allocations';
  Allows requests based on WHO is making them
  */
 
-interface IAuthorizationConfig {
+interface AuthorizationConfig {
     users: Array<string>;
 }
 
@@ -13,7 +13,7 @@ export class AuthorizationPolicy extends Policy {
 
     constructor(config) {
         super(config);
-        this.config = <IAuthorizationConfig> config;
+        this.config = <AuthorizationConfig> config;
     }
 
     public handle(request: AllocationRequest, allocations: Allocations) {

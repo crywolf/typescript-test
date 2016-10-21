@@ -1,6 +1,6 @@
 import {Event} from '../../Framework/Events/Event';
 
-export interface INameSetEventData {
+export interface NameSetEventData {
     newName: string;
 }
 
@@ -10,13 +10,13 @@ export class NameSetEvent extends Event {
         super();
     }
 
-    public getData(): INameSetEventData {
+    public getData(): NameSetEventData {
         return {
             newName: this.newName
         };
     }
 
-    public deserialize(serializedEvent: INameSetEventData) {
+    public deserialize(serializedEvent: NameSetEventData) {
         this.newName = serializedEvent.newName;
     }
 

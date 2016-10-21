@@ -1,6 +1,6 @@
-import {IBuilder} from '../Framework/ViewsAndBuilders/BuilderInterface';
+import {Builder} from '../Framework/ViewsAndBuilders/BuilderInterface';
 
-export interface ICampaignBuilder extends IBuilder {
+export interface CampaignBuilder extends Builder {
 
     setName(name);
     addTargeting(targetings);

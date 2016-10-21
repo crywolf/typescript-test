@@ -1,11 +1,11 @@
 import {NameSetEvent} from './SetName/NameSet.event';
-import {ICampaignBuilder} from './CampaignBuilderInterface';
+import {CampaignBuilder} from './CampaignBuilderInterface';
 import {View} from '../Framework/ViewsAndBuilders/View';
 import {TargetingSetEvent} from './SetTargeting/TargetingSet.event';
 
 export class CampaignView extends View {
 
-    constructor(protected builder: ICampaignBuilder) {
+    constructor(protected builder: CampaignBuilder) {
         super();
     }
 

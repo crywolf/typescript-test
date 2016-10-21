@@ -7,7 +7,8 @@ export class StateCollection {
 
     private states: {[type: string]: State} = {};
 
-    constructor(private entity: Entity) {};
+    constructor(private entity: Entity) {
+    }
 
     public setState(StateType: typeof State) {
         let stateType = StateType.getType();

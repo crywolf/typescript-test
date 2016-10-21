@@ -1,18 +1,18 @@
 import {AllocationRequest} from '../AllocationRequest';
 import {Allocations} from '../Allocations';
 import {Policy} from './Policy';
-import {IPolicyConfig} from './PolicyConfig';
+import {PolicyConfig} from './PolicyConfig';
 import {NoRestrictionsPolicy} from './NoRestrictionsPolicy';
 
 export class Policies {
 
-    public static instantiate<T extends Policy>(PolicyType: { new (... any): T }, config: IPolicyConfig) {
+    public static instantiate<T extends Policy>(PolicyType: { new (... any): T }, config: PolicyConfig) {
         return new PolicyType(config);
     }
 
     private policyChain = new NoRestrictionsPolicy({});
 
-    constructor(policyConfigs: Array<IPolicyConfig>) {
+    constructor(policyConfigs: Array<PolicyConfig>) {
         policyConfigs.forEach((policyConfig) => {
             this.add(policyConfig.type, policyConfig.config);
         });

@@ -14,7 +14,7 @@ export class SubCampaignAddedEvent extends Event {
     }
 
     public deserialize(serializedEvent) {
-        ;
+        //
     }
 
 }

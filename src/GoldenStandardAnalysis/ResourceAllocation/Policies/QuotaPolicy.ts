@@ -5,7 +5,7 @@ import {Allocations} from '../Allocations';
  Approves requests based on the request amount and total quota for it
  */
 
-interface IQuotaConfig {
+interface QuotaConfig {
     requestType: string;
     quota: number;
 }
@@ -14,7 +14,7 @@ export class QuotaPolicy extends Policy {
 
     constructor(config) {
         super(config);
-        this.config = <IQuotaConfig> config;
+        this.config = <QuotaConfig> config;
     }
 
     public handle(request: AllocationRequest, allocations: Allocations) {

@@ -15,11 +15,11 @@ export abstract class Event {
 
     public getData() {
         return <any> {};
-    };
+    }
 
     public getTypeName() {
         return (<any> this).constructor.name;
-    };
+    }
 
     public serialize() {
         return {

@@ -14,7 +14,7 @@ export class TargetingSetEvent extends Event {
     }
 
     public deserialize(serializedEvent) {
-        ;
+        //
     }
 
 }

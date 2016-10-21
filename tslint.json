@@ -1,19 +1,50 @@
 {
   "extends": "tslint:latest",
+  "rulesDirectory": "node_modules/tslint-eslint-rules/dist/rules", // rules from package `tslint-eslint-rules`
   "rules": {
+    // eslint rules from package `tslint-eslint-rules`
+    "no-constant-condition": true,
+    "no-control-regex": true,
+    "no-duplicate-case": true,
+    "no-empty-character-class": true,
+    "no-ex-assign": true,
+    "no-extra-boolean-cast": true,
+    "no-irregular-whitespace": true,
+    "no-extra-semi": true,
+    "no-multi-spaces": [
+      true,
+      {
+        "exceptions": { "PropertyAssignment": false }
+      }
+    ],
+    "no-inner-declarations": true,
+    "no-regex-spaces": true,
+    "no-sparse-arrays": true,
+    "valid-typeof": true,
+    "object-curly-spacing": [false,
+      "always"
+    ],
+
+    // tslint rules
     "ordered-imports": false, // it somehow shows strange results when set to true (?)
     "quotemark": [true, "single"],
-    "variable-name": [true,
-      "ban-keywords",
-      "check-format",
-      "allow-leading-underscore"
+    "indent": [true,
+      "spaces"
     ],
+    "interface-name": [true, "never-prefix"],
     "trailing-comma": [
       true,
       {
         "multiline": "never",
         "singleline": "never"
       }
-    ]
+    ],
+    "triple-equals": true,
+    "variable-name": [true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "use-isnan": true
   }
 }

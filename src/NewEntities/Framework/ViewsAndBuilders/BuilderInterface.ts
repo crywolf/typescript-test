@@ -1,3 +1,3 @@
-export interface IBuilder {
+export interface Builder {
 
 }
