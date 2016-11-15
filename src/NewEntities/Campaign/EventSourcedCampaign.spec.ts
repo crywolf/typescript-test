@@ -21,9 +21,9 @@ describe('Campaign', () => {
     };
 
     function createCampaign(id, data) {
-        let campaign = new EventSourcedCampaign(id, data);
-        campaign.setEnvironment(environment);
-        return campaign;
+        let newCampaign = new EventSourcedCampaign(id, data);
+        newCampaign.setEnvironment(environment);
+        return newCampaign;
     }
 
     function addSubCampaignsToCampaign() {

@@ -8,8 +8,8 @@ export abstract class EventManager {
     constructor(private parent?: EventManager) {
     }
 
-    public decorate(Decorator: typeof EventManager) {
-        return new (<any> Decorator)(this); // TODO: get rid of <any>
+    public decorate(decoratorConstructor: typeof EventManager) {
+        return new (<any> decoratorConstructor)(this); // TODO: get rid of <any>
     }
 
     public getEvents() {

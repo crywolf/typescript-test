@@ -13,8 +13,7 @@ describe('Campaign', () => {
     let subCampaign2: Campaign;
 
     function createCampaign(id) {
-        let campaign = new Campaign(id);
-        return campaign;
+        return new Campaign(id);
     }
 
     function addSubCampaignsToCampaign() {

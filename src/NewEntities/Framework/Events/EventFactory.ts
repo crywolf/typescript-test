@@ -3,11 +3,11 @@ import * as eventDictionary from './EventDictionary';
 
 export class EventFactory {
 
-    public instantiate<E extends Event>(EventType: {new(): E}): E {
-        return new EventType();
+    public static instantiate<E extends Event>(eventConstructor: {new(): E}): E {
+        return new eventConstructor();
     }
 
-    public deserialize(serializedEvent) {
+    public static deserialize(serializedEvent) {
         let constructorName = serializedEvent.typeName;
         let event: Event = new eventDictionary[constructorName]();
         event.deserialize(serializedEvent.data);

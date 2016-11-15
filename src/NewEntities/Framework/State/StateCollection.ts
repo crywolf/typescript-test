@@ -10,9 +10,9 @@ export class StateCollection {
     constructor(private entity: Entity) {
     }
 
-    public setState(StateType: typeof State) {
-        let stateType = StateType.getType();
-        let newState = new (<any> StateType)(this);         // TODO: figure out how to get rid of <any> here
+    public setState(stateConstructor: typeof State) {
+        let stateType = stateConstructor.getType();
+        let newState = new (<any> stateConstructor)(this);         // TODO: figure out how to get rid of <any> here
         this.states[stateType] = newState;
         this.fireEvent(this.createEntityStateSetEvent(newState));
     }

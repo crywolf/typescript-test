@@ -6,8 +6,8 @@ import {NoRestrictionsPolicy} from './NoRestrictionsPolicy';
 
 export class Policies {
 
-    public static instantiate<T extends Policy>(PolicyType: { new (... any): T }, config: PolicyConfig) {
-        return new PolicyType(config);
+    public static instantiate<T extends Policy>(policyConstructor: { new (...args: any[]): T }, config: PolicyConfig) {
+        return new policyConstructor(config);
     }
 
     private policyChain = new NoRestrictionsPolicy({});
