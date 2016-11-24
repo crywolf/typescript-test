@@ -6,7 +6,8 @@ import {NoRestrictionsPolicy} from './NoRestrictionsPolicy';
 
 export class Policies {
 
-    public static instantiate<T extends Policy>(policyConstructor: { new (...args: any[]): T }, config: PolicyConfig) {
+    // tslint:disable-next-line:max-line-length
+    public static instantiate<T extends Policy>(policyConstructor: { new (...args: Array<any>): T }, config: PolicyConfig) {
         return new policyConstructor(config);
     }
 

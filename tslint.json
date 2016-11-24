@@ -26,7 +26,8 @@
     ],
 
     // tslint rules
-    "ordered-imports": false, // it somehow shows strange results when set to true (?)
+    "array-type": [true, "generic"],
+    "ordered-imports": false, // it somehow shows strange results when set to true (?) - this rule is strange!
     "quotemark": [true, "single"],
     "indent": [true,
       "spaces"

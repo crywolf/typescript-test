@@ -1,10 +1,5 @@
 import {CampaignBuilder} from './CampaignBuilderInterface';
-import {Targeting} from '../Targeting/Targeting.ts';
-
-export class CampaignData {
-    public name: string = '';
-    public targetings: Array<Targeting> = [];
-}
+import {CampaignData} from './CampaignData';
 
 export class CampaignInstanceBuilder implements CampaignBuilder {
 

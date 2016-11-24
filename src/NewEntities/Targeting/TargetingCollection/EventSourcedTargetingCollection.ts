@@ -1,5 +1,5 @@
 import {TargetingCollection} from './TargetingCollection';
-import {Targeting} from '../Targeting.ts';
+import {Targeting} from '../Targeting';
 import {TargetingSetEvent} from '../../Campaign/SetTargeting/TargetingSet.event';
 
 export class EventSourcedTargetingCollection extends TargetingCollection {
@@ -15,7 +15,7 @@ export class EventSourcedTargetingCollection extends TargetingCollection {
     }
 
     private initialize(targetings: Array<Targeting>) {
-        targetings.forEach(targeting => this.addToMap(targeting));
+        targetings.forEach((targeting) => this.addToMap(targeting));
     }
 
 }

@@ -1,5 +1,5 @@
 import {Campaign} from '../Campaign';
-import {Targeting} from '../../Targeting/Targeting.ts';
+import {Targeting} from '../../Targeting/Targeting';
 import {GeoTargeting} from '../../Targeting/GeoTargeting/GeoTargeting';
 
 export class SetTargetingCommand {

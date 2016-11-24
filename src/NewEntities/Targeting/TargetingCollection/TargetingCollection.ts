@@ -1,4 +1,4 @@
-import {Targeting} from '../Targeting.ts';
+import {Targeting} from '../Targeting';
 import {ValueObjectCollection} from '../../Framework/ValueObjects/ValueObjectCollection';
 
 /*

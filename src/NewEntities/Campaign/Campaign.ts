@@ -1,7 +1,7 @@
 import {CampaignCollection} from './CampaignCollection/CampaignCollection';
 import {Entity} from '../Framework/Entity/Entity';
 import {TargetingCollection} from '../Targeting/TargetingCollection/TargetingCollection';
-import {Targeting} from '../Targeting/Targeting.ts';
+import {Targeting} from '../Targeting/Targeting';
 import {CampaignStates} from './States/CampaignStates';
 import {State} from '../Framework/State/State';
 
@@ -29,7 +29,7 @@ export class Campaign extends Entity {
 
     public setTargeting(targeting: Targeting) {
         this.targetings.add(targeting);
-        this.subcampaigns.each(subcampaign => subcampaign.setTargeting(targeting));
+        this.subcampaigns.each((subcampaign) => subcampaign.setTargeting(targeting));
     }
 
     public getTargetingByType(targetingType: typeof Targeting) {

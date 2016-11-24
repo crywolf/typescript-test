@@ -2,7 +2,8 @@ import {NameSetEvent} from './SetName/NameSet.event';
 import {Campaign} from './Campaign';
 import {EventFactory} from '../Framework/Events/EventFactory';
 import {CampaignView} from './CampaignView';
-import {CampaignInstanceBuilder, CampaignData} from './CampaignInstanceBuilder';
+import {CampaignInstanceBuilder} from './CampaignInstanceBuilder';
+import {CampaignData} from './CampaignData';
 import {TransactionSavingEventManager} from '../Framework/Events/Managers/TransactionSavingEventManager';
 import {BaseEventManager} from '../Framework/Events/Managers/BaseEventManager';
 import {Environment} from '../Framework/Environment/Environment';
@@ -45,7 +46,7 @@ export class CampaignFactory {
         let data = new CampaignData();
         let view = new this.viewClass(new this.builderClass(data));
 
-        events.forEach(serializedEvent => this.applyEvent(view, serializedEvent));
+        events.forEach((serializedEvent) => this.applyEvent(view, serializedEvent));
 
         return data;
     }

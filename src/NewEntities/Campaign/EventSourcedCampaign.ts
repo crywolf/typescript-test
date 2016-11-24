@@ -1,5 +1,5 @@
 import {Campaign} from './Campaign';
-import {CampaignData} from './CampaignInstanceBuilder';
+import {CampaignData} from './CampaignData';
 import {NameSetEvent} from './SetName/NameSet.event';
 import {EventSourcedTargetingCollection} from '../Targeting/TargetingCollection/EventSourcedTargetingCollection';
 

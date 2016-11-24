@@ -3,7 +3,7 @@ import {Campaign} from './Campaign';
 import {Environment} from '../Framework/Environment/Environment';
 import {TransactionSavingEventManager} from '../Framework/Events/Managers/TransactionSavingEventManager';
 import {BaseEventManager} from '../Framework/Events/Managers/BaseEventManager';
-import {CampaignData} from './CampaignInstanceBuilder';
+import {CampaignData} from './CampaignData';
 import {GeoTargeting} from '../Targeting/GeoTargeting/GeoTargeting';
 import {EventSourcedCampaign} from './EventSourcedCampaign';
 import {NameSetEvent} from './SetName/NameSet.event';

@@ -1,5 +1,5 @@
 import {Event} from '../../Framework/Events/Event';
-import {Targeting} from '../../Targeting/Targeting.ts';
+import {Targeting} from '../../Targeting/Targeting';
 
 export class TargetingSetEvent extends Event {
 
