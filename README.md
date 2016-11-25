@@ -8,11 +8,13 @@ Then just run `yarn`.
 
 ## Usage
 
-`yarn test` (`npm test`) runs tests and watches for changes
+`yarn test:watch` (`npm run test:watch`) runs tests and starts watching for changes
 
-`yarn test:single` (`npm run test:single`) runs tests once (without watching)
+`yarn test` (`npm test`) runs tests once (without watching)
 
 `yarn lint` (`npm run lint`) runs linter
+
+`yarn security` (`npm run security`) checks for known vulnerabilities
 
 (`yarn build` or `npm run build`) creates distribution bundle
 
