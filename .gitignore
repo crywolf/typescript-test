@@ -1,7 +1,6 @@
 src/**/*.js
 node_modules
 dist
-typings
 npm-debug.log
 yarn-error.log
 .idea/

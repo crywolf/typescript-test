@@ -4,7 +4,6 @@
   "description": "",
   "main": "Car.js",
   "scripts": {
-    "postinstall": "./node_modules/.bin/typings install",
     "commit": "git-cz",
     "lint": "tslint ./src/{,**/}*.ts",
     "test": "./node_modules/.bin/mocha --opts ./mocha.opts",
@@ -24,6 +23,8 @@
   },
   "devDependencies": {
     "@krux/condition-jenkins": "^1.0.1",
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.33",
     "chai": "^3.5.0",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
