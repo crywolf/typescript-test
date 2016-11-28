@@ -14,11 +14,13 @@ Then just run `yarn`.
 
 `yarn lint` (`npm run lint`) runs linter
 
+`yarn coverage` (`npm run coverage`) runs code coverage
+
 `yarn security` (`npm run security`) checks for known vulnerabilities
 
 (`yarn build` or `npm run build`) creates distribution bundle
 
-## Commiting changes
+## Committing changes
 
 `yarn commit` (`npm run commit`) runs linter and forces the user to write commit message according to [AngularJS's commit message convention](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines)  
 
