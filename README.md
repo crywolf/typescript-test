@@ -1,6 +1,11 @@
 # typescript-test
 This is just a test project to share with colleagues where we discuss various potential solutions in our future with Typescript :-)
 
+[![bitHound Overall Score](https://www.bithound.io/github/crywolf/typescript-test/badges/score.svg)](https://www.bithound.io/github/crywolf/typescript-test)
+[![bitHound Dependencies](https://www.bithound.io/github/crywolf/typescript-test/badges/dependencies.svg)](https://www.bithound.io/github/crywolf/typescript-test/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/crywolf/typescript-test/badges/devDependencies.svg)](https://www.bithound.io/github/crywolf/typescript-test/master/dependencies/npm)
+[![bitHound Code](https://www.bithound.io/github/crywolf/typescript-test/badges/code.svg)](https://www.bithound.io/github/crywolf/typescript-test)
+
 ## Initial installation
 
 To use [Yarn](https://yarnpkg.com) package manager run `npm install -g yarn` (_highly recommended_).

@@ -33,6 +33,7 @@
       "spaces"
     ],
     "interface-name": [true, "never-prefix"],
+    "no-parameter-properties": false,
     "trailing-comma": [
       true,
       {
